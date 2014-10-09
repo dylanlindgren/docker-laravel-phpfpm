@@ -6,6 +6,7 @@ MAINTAINER "Dylan Lindgren" <dylan.lindgren@gmail.com>
 RUN apt-get update -y && \
     apt-get install -y \
     php5-fpm \
+    php5-curl \
     php5-gd \
     php5-geoip \
     php5-imagick \
