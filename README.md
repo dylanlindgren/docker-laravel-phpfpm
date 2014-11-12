@@ -1,5 +1,3 @@
-dylanlindgren/docker-laravel-phpfpm
-====================
 ![Docker + Laravel](https://cloud.githubusercontent.com/assets/6241518/4891723/2afe1b12-63ab-11e4-9cac-d86e49119484.jpg)
 
 This is a [Docker](http://www.docker.com) image for [PHP-FPM](http://php-fpm.org), intended for use in the fashion described on my series of blog articles about using Docker and the [Laravel PHP framework](http://www.laravel.com) together:
