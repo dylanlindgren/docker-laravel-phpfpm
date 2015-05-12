@@ -1,6 +1,6 @@
 FROM debian:jessie
 
-MAINTAINER "Dylan Lindgren" <dylan.lindgren@gmail.com>
+MAINTAINER "Zak Henry" <zak.henry@gmail.com>
 
 # Install PHP-FPM and popular/laravel required extensions
 RUN apt-get update -y && \
