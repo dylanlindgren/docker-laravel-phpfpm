@@ -37,9 +37,12 @@ RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php5/fpm/php.ini && 
     sed -i '/^;catch_workers_output/ccatch_workers_output = yes' /etc/php5/fpm/pool.d/www.conf && \
     sed -i '/^;env\[TEMP\] = .*/aenv[DB_PORT_5432_TCP_ADDR] = $DB_PORT_5432_TCP_ADDR' /etc/php5/fpm/pool.d/www.conf
 
+ADD config/xdebug.ini /opt/etc/xdebug.ini
+RUN cat /opt/etc/xdebug.ini >> /etc/php5/fpm/conf.d/20-xdebug.ini
+
 RUN mkdir -p /data
 VOLUME ["/data"]
 
-EXPOSE 9000
+EXPOSE 9000 9001
 
 ENTRYPOINT ["/usr/sbin/php5-fpm", "-F"]
