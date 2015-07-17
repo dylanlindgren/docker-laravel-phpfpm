@@ -46,8 +46,7 @@ ADD config/xdebug.ini /opt/etc/xdebug.ini
 ADD config/php-start.sh /opt/bin/php-start.sh
 RUN chmod u=rwx /opt/bin/php-start.sh
 
-RUN mkdir -p /data
-VOLUME ["/data"]
+RUN mkdir -p ${DATA_ROOT:-/data}
 
 EXPOSE 9000
 
