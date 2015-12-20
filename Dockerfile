@@ -8,6 +8,8 @@ WORKDIR /data
 
 RUN apt-get update && \
     apt-get install -y \
+    build-essential \
+    libpq-dev \
     libmcrypt-dev
 
 RUN docker-php-ext-install mcrypt pdo_pgsql mbstring pdo_mysql sockets opcache
