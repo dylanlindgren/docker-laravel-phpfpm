@@ -6,7 +6,9 @@ RUN mkdir -p /data
 VOLUME ["/data"]
 WORKDIR /data
 
-RUN apt-get update
+RUN apt-get update && \
+    apt-get install -y \
+    libmcrypt-dev
 
 RUN docker-php-ext-install mcrypt pdo_pgsql mbstring pdo_mysql sockets opcache
 
