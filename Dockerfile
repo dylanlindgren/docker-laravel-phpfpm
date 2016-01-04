@@ -33,8 +33,7 @@ ADD config/xdebug.ini /opt/etc/xdebug.ini
 
 RUN sed -i "s|%data-root%|${DATA_ROOT:-/data}|" /opt/etc/xdebug.ini
 
-RUN cat /opt/etc/memory.ini >> /usr/local/etc/php/conf.d/memory.ini && \
-    cat /opt/etc/xdebug.ini >> /usr/local/etc/php/conf.d/xdebug.ini
+RUN cat /opt/etc/memory.ini >> /usr/local/etc/php/conf.d/memory.ini
 
 
 # PHP startup script
