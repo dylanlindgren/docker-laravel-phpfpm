@@ -10,9 +10,10 @@ RUN apt-get update && \
     apt-get install -y \
     build-essential \
     libpq-dev \
-    libmcrypt-dev
+    libmcrypt-dev \
+    libxml2-dev
 
-RUN docker-php-ext-install mcrypt pdo_pgsql mbstring pdo_mysql sockets opcache
+RUN docker-php-ext-install mcrypt pdo_pgsql mbstring pdo_mysql sockets opcache soap
 
 ENV XDEBUG_VERSION xdebug-2.4.0rc3
 RUN cd /tmp && \
